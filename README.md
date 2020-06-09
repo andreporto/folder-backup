@@ -1,5 +1,6 @@
-# Simple shell script to make encrypted folder backup
+![GitHub repo size](https://img.shields.io/github/repo-size/andreporto/folder-backup) ![Last commit](https://img.shields.io/github/last-commit/andreporto/folder-backup)
 
+# Simple shell script to make encrypted folder backup 
 ## Backup:
 <img src="demo/demo-backup.gif">
 ---
