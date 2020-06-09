@@ -19,13 +19,16 @@ folder-backup "SOURCE_FOLDER" ["TARGET FOLDER NAME"] ["CUSTOM PASSWORD"]
 ```shell
 ./folder-backup.sh MyFolder
 ```
+---
 
 - Zip all files and sub-folders from MyFolder to MySafeStorage folder. All zip files will be encrypted with folder-backup.key file content as password.
 ```shell
 ./folder-backup.sh MyFolder MySafeStorage
 ```
+---
 
 - Zip all files and sub-folders from MyFolder to MySafeStorage folder. All zip files will be encrypted with "MySecureKey123" password.
 ```shell
 ./folder-backup.sh MyFolder MySafeStorage MySecureKey123
 ```
+---
