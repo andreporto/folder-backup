@@ -1,16 +1,23 @@
 # Simple shell script to make encrypted folder backup
 
+## Backup:
+<img src="demo/demo1.gif">
+---
+## Restore:
+<img src="demo/demo2.gif">
+---
+
 ## Usage
 
-------------------------------------------------------------------------------------------
+---
 ```shell
 folder-backup.sh "SOURCE_FOLDER" ["TARGET FOLDER NAME"] ["CUSTOM PASSWORD"]
 ```
-------------------------------------------------------------------------------------------
+---
 * "SOURCE_FOLDER" IS THE SOURCE FOLDER NAME TO BACKUP, IT CAN CONTAINS FILES AND SUB-FOLDERS
 * folder-backup.key FILE CONTENT WILL BE THE ENCRYPTION KEY FOR ALL BACKUP FILES IF NO CUSTOM PASSWORD INFORMED
 * OPTIONALLY YOU CAN ENTER A [CUSTOM PASSWORD] TO OVERRIDE backup.key FILE USAGE
-------------------------------------------------------------------------------------------
+---
 
 ### Examples:
 
