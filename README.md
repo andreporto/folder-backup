@@ -4,7 +4,7 @@
 
 ------------------------------------------------------------------------------------------
 ```shell
-folder-backup "SOURCE_FOLDER" ["TARGET FOLDER NAME"] ["CUSTOM PASSWORD"]
+folder-backup.sh "SOURCE_FOLDER" ["TARGET FOLDER NAME"] ["CUSTOM PASSWORD"]
 ```
 ------------------------------------------------------------------------------------------
 * "SOURCE_FOLDER" IS THE SOURCE FOLDER NAME TO BACKUP, IT CAN CONTAINS FILES AND SUB-FOLDERS
