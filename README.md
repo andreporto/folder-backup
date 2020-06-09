@@ -1,4 +1,4 @@
-# Simple shell script to make folder backup
+# Simple shell script to make encrypted folder backup
 
 ## Usage
 
