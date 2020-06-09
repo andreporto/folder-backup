@@ -1,10 +1,10 @@
 # Simple shell script to make encrypted folder backup
 
 ## Backup:
-<img src="demo/demo1.gif">
+<img src="demo/demo-backup.gif">
 ---
 ## Restore:
-<img src="demo/demo2.gif">
+<img src="demo/demo-restore.gif">
 ---
 
 ## Usage
