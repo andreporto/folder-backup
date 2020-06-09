@@ -3,11 +3,12 @@
 # Simple shell script to make encrypted folder backup 
 ## Backup:
 <img src="demo/demo-backup.gif">
----
+
+
 
 ## Restore:
 <img src="demo/demo-restore.gif">
----
+
 
 ## Usage
 
@@ -41,3 +42,9 @@ folder-backup.sh "SOURCE_FOLDER" ["TARGET FOLDER NAME"] ["CUSTOM PASSWORD"]
 ./folder-backup.sh MyFolder MySafeStorage MySecureKey123
 ```
 ---
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
