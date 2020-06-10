@@ -1,6 +1,17 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/andreporto/folder-backup) ![Last commit](https://img.shields.io/github/last-commit/andreporto/folder-backup)
 
 # Simple shell script to make encrypted folder backup 
+
+## Installation
+```shell
+git clone https://github.com/andreporto/folder-backup.git
+
+chmod +x ./folder-backup/fbkp.sh
+
+ln ./folder-backup/fbkp.sh ~/fbkp.sh
+```
+
+
 ## Backup:
 <img src="demo/demo-backup.gif">
 
@@ -17,28 +28,30 @@ folder-backup.sh "SOURCE_FOLDER" ["TARGET FOLDER NAME"] ["CUSTOM PASSWORD"]
 ```
 ---
 * "SOURCE_FOLDER" IS THE SOURCE FOLDER NAME TO BACKUP, IT CAN CONTAINS FILES AND SUB-FOLDERS
-* folder-backup.key FILE CONTENT WILL BE THE ENCRYPTION KEY FOR ALL BACKUP FILES IF NO CUSTOM PASSWORD INFORMED
-* OPTIONALLY YOU CAN ENTER A [CUSTOM PASSWORD] TO OVERRIDE backup.key FILE USAGE
+* IF NO TARGET FOLDER IS ENTERED IT WILL BE CREATED A SOURCE_FOLDER + DATE NAMED FOLDER
+* OPTIONALLY YOU CAN ENTER A [CUSTOM PASSWORD]
+* IF NO PASSWORD IS ENTERED DEFAULT PASSWORD WILL BE USED TO ENCRYPT FILES
+* "REPLACE-THIS-TEXT-WITH-YOUR-REAL-PASSWORD-IN-DOUBLE-QUOTES" IS THE DEFAULT PASSWORD AND YOU CAN CHANGE IT.
 ---
 
 ### Examples:
 
 
-- Zip all files and sub-folders from MyFolder to a new folder named with MyFolder-YYYY-MM-DD pattern. All zip files will be encrypted with folder-backup.key file content as password
+- Zip all files and sub-folders from MyFolder to a new folder named with MyFolder-YYYY-MM-DD pattern. All zip files will be encrypted with with custom or default password.
 ```shell
-./folder-backup.sh MyFolder
+~/fbkp.sh MyFolder
 ```
 ---
 
-- Zip all files and sub-folders from MyFolder to MySafeStorage folder. All zip files will be encrypted with folder-backup.key file content as password.
+- Zip all files and sub-folders from MyFolder to MySafeStorage folder. All zip files will be encrypted with with custom or default password.
 ```shell
-./folder-backup.sh MyFolder MySafeStorage
+~/fbkp.sh MyFolder MySafeStorage
 ```
 ---
 
 - Zip all files and sub-folders from MyFolder to MySafeStorage folder. All zip files will be encrypted with "MySecureKey123" password.
 ```shell
-./folder-backup.sh MyFolder MySafeStorage MySecureKey123
+~/fbkp.sh MyFolder MySafeStorage MySecureKey123
 ```
 ---
 
