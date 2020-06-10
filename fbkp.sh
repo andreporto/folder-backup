@@ -60,7 +60,10 @@ find $source -maxdepth 1 -mindepth 1 -type d -exec zip -e -P $key -r {}.zip {} -
 mv $source/*zip $folder/
 
 # Make unzip script
-echo "find . -type f -exec unzip -P '$key' {} \;" > "$folder/restaurar.sh"
-chmod +x "$folder/restaurar.sh"
+echo '#!/bin/bash' > "$folder/restore.sh"
+echo 'target=./' >> "$folder/restore.sh"
+echo 'if [ $1 ]; then target=$1 fi' >> "$folder/restore.sh"
+echo 'find . -type f -exec unzip -j -d $target -P '$key' {} \;' >> "$folder/restore.sh"
+chmod +x "$folder/restore.sh"
 
-echo "END OF $1 BACKUP"
+echo "--- END OF $1 BACKUP ---"
