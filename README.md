@@ -11,13 +11,16 @@ chmod +x ./folder-backup/fbkp.sh
 ln ./folder-backup/fbkp.sh ~/fbkp.sh
 ```
 
+## 01 Clone repo and config script:
+<img src="demo/01clone.gif">
 
-## Backup:
-<img src="demo/demo-backup.gif">
+
+## 02 Do your backups:
+<img src="demo/02backup.gif">
 
 
-## Restore:
-<img src="demo/demo-restore.gif">
+## 03 Restore your backup to a selected folder:
+<img src="demo/03restore.gif">
 
 
 ## Usage
