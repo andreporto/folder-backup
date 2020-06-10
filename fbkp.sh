@@ -51,10 +51,10 @@ if [ ! -s $folder ]; then
 fi
 
 # Zip files in source folder
-find $source -maxdepth 1 -mindepth 1 -type f -exec zip -e -P $key -r {}.zip {} \;
+find $source -maxdepth 1 -mindepth 1 -type f -execdir zip -e -P $key -r {}.zip {} \;
 
 # Zip folders in source folder
-find $source -maxdepth 1 -mindepth 1 -type d -exec zip -e -P $key -r {}.zip {} -x "*node_modules*" -x "*.DS_Store*" \;
+find $source -maxdepth 1 -mindepth 1 -type d -execdir zip -e -P $key -r {}.zip {} -x "*node_modules*" -x "*.DS_Store*" \;
 
 #Move all zip files to target folder
 mv $source/*zip $folder/
@@ -62,8 +62,10 @@ mv $source/*zip $folder/
 # Make unzip script
 echo '#!/bin/bash' > "$folder/restore.sh"
 echo 'target=./' >> "$folder/restore.sh"
-echo 'if [ $1 ]; then target=$1 fi' >> "$folder/restore.sh"
-echo 'find . -type f -exec unzip -j -d $target -P '$key' {} \;' >> "$folder/restore.sh"
+echo 'if [ $1 ]; then ' >> "$folder/restore.sh"
+echo 'target=$1' >> "$folder/restore.sh"
+echo 'fi' >> "$folder/restore.sh"
+echo 'find . -type f -exec unzip -d $target -P '$key' {} \;' >> "$folder/restore.sh"
 chmod +x "$folder/restore.sh"
 
 echo "--- END OF $1 BACKUP ---"
